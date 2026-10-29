@@ -1,0 +1,41 @@
+{
+  "_note": "FAKE SAMPLE DATA - synthetic, not real students. For local testing only.",
+  "timetable": {
+    "Mon": [
+      {
+        "from": "9:00 AM",
+        "to": "9:50 AM",
+        "subject": {
+          "code": "SMP101",
+          "name": "Sample Algorithms"
+        },
+        "teacher": "Dr. A. Faculty",
+        "classroom": "R-101"
+      }
+    ],
+    "Tue": [
+      {
+        "from": "9:00 AM",
+        "to": "9:50 AM",
+        "subject": {
+          "code": "SMP101",
+          "name": "Sample Algorithms"
+        },
+        "teacher": "Dr. A. Faculty",
+        "classroom": "R-101"
+      }
+    ],
+    "Wed": [
+      {
+        "from": "9:00 AM",
+        "to": "9:50 AM",
+        "subject": {
+          "code": "SMP101",
+          "name": "Sample Algorithms"
+        },
+        "teacher": "Dr. A. Faculty",
+        "classroom": "R-101"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "FAKE SAMPLE DATA - synthetic, not real students. For local testing only.",
+  "fullName": "Aarav Sample",
+  "rollNumber": "SAMPLE-0001",
+  "email": "sample.student@example.invalid",
+  "branch": "Computer Science (Sample)",
+  "course": "B.Tech",
+  "batch": "2022-2026",
+  "semester": "5",
+  "classroom": "CS-5A",
+  "section": "A"
+}

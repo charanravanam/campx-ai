@@ -1,0 +1,4 @@
+Forwarding: ssh -p 443 -R0:localhost:5173 a.pinggy.io
+Path: cd Downloads\files\campx-ai-complete\campx-ai
+Front End: npm run dev
+Back End: .\backend\.venv\Scripts\python.exe -m uvicorn app.main:app --app-dir backend --reload

@@ -1,0 +1,35 @@
+{
+  "_note": "FAKE SAMPLE DATA - synthetic, not real students. For local testing only.",
+  "subjects": [
+    {
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "attended": 38,
+      "total": 45
+    },
+    {
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "attended": 30,
+      "total": 44
+    },
+    {
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "attended": 41,
+      "total": 46
+    },
+    {
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "attended": 25,
+      "total": 40
+    },
+    {
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "attended": 33,
+      "total": 42
+    }
+  ]
+}

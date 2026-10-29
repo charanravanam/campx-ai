@@ -1,0 +1,45 @@
+{
+  "_note": "FAKE SAMPLE DATA - synthetic, not real students. For local testing only.",
+  "subjects": [
+    {
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "faculty": "Dr. A. Faculty",
+      "credits": 4,
+      "category": "Core",
+      "semester": 5
+    },
+    {
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "credits": 4,
+      "category": "Core",
+      "semester": 5
+    },
+    {
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "faculty": "Dr. C. Mentor",
+      "credits": 4,
+      "category": "Core",
+      "semester": 5
+    },
+    {
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "credits": 4,
+      "category": "Core",
+      "semester": 5
+    },
+    {
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "credits": 4,
+      "category": "Core",
+      "semester": 5
+    }
+  ]
+}

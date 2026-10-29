@@ -1,0 +1,363 @@
+{
+  "_note": "FAKE SAMPLE DATA - synthetic, not real students. For local testing only.",
+  "entries": [
+    {
+      "day": "Monday",
+      "startTime": "09:00",
+      "endTime": "09:50"
+    },
+    {
+      "day": "Monday",
+      "startTime": "09:50",
+      "endTime": "10:40",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-101"
+    },
+    {
+      "day": "Monday",
+      "startTime": "10:40",
+      "endTime": "11:00",
+      "type": "Break"
+    },
+    {
+      "day": "Monday",
+      "startTime": "11:00",
+      "endTime": "11:50",
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "room": "R-103"
+    },
+    {
+      "day": "Monday",
+      "startTime": "11:50",
+      "endTime": "12:40",
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "room": "R-104"
+    },
+    {
+      "day": "Monday",
+      "startTime": "12:40",
+      "endTime": "13:30",
+      "type": "Lunch"
+    },
+    {
+      "day": "Monday",
+      "startTime": "13:30",
+      "endTime": "14:20",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-100"
+    },
+    {
+      "day": "Monday",
+      "startTime": "14:20",
+      "endTime": "15:10"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "09:00",
+      "endTime": "09:50",
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "room": "R-101"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "09:50",
+      "endTime": "10:40",
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "room": "R-102"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "10:40",
+      "endTime": "11:00",
+      "type": "Break"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "11:00",
+      "endTime": "11:50",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-104"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "11:50",
+      "endTime": "12:40",
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "faculty": "Dr. C. Mentor",
+      "room": "R-105"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "12:40",
+      "endTime": "13:30",
+      "type": "Lunch"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "13:30",
+      "endTime": "14:20"
+    },
+    {
+      "day": "Tuesday",
+      "startTime": "14:20",
+      "endTime": "15:10",
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "faculty": "Dr. A. Faculty",
+      "room": "R-102"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "09:00",
+      "endTime": "09:50",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-102"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "09:50",
+      "endTime": "10:40",
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "faculty": "Dr. C. Mentor",
+      "room": "R-103"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "10:40",
+      "endTime": "11:00",
+      "type": "Break"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "11:00",
+      "endTime": "11:50",
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "room": "R-105"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "11:50",
+      "endTime": "12:40",
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "faculty": "Dr. A. Faculty",
+      "room": "R-100"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "12:40",
+      "endTime": "13:30",
+      "type": "Lunch"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "13:30",
+      "endTime": "14:20",
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "faculty": "Dr. C. Mentor",
+      "room": "R-102"
+    },
+    {
+      "day": "Wednesday",
+      "startTime": "14:20",
+      "endTime": "15:10",
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "room": "R-103"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "09:00",
+      "endTime": "09:50",
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "room": "R-103"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "09:50",
+      "endTime": "10:40",
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "faculty": "Dr. A. Faculty",
+      "room": "R-104"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "10:40",
+      "endTime": "11:00",
+      "type": "Break"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "11:00",
+      "endTime": "11:50",
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "faculty": "Dr. C. Mentor",
+      "room": "R-100"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "11:50",
+      "endTime": "12:40"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "12:40",
+      "endTime": "13:30",
+      "type": "Lunch"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "13:30",
+      "endTime": "14:20",
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "faculty": "Dr. A. Faculty",
+      "room": "R-103"
+    },
+    {
+      "day": "Thursday",
+      "startTime": "14:20",
+      "endTime": "15:10",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-104"
+    },
+    {
+      "day": "Friday",
+      "startTime": "09:00",
+      "endTime": "09:50",
+      "subjectCode": "SMP103",
+      "subjectName": "Sample Networks",
+      "faculty": "Dr. C. Mentor",
+      "room": "R-104"
+    },
+    {
+      "day": "Friday",
+      "startTime": "09:50",
+      "endTime": "10:40",
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "room": "R-105"
+    },
+    {
+      "day": "Friday",
+      "startTime": "10:40",
+      "endTime": "11:00",
+      "type": "Break"
+    },
+    {
+      "day": "Friday",
+      "startTime": "11:00",
+      "endTime": "11:50"
+    },
+    {
+      "day": "Friday",
+      "startTime": "11:50",
+      "endTime": "12:40",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-102"
+    },
+    {
+      "day": "Friday",
+      "startTime": "12:40",
+      "endTime": "13:30",
+      "type": "Lunch"
+    },
+    {
+      "day": "Friday",
+      "startTime": "13:30",
+      "endTime": "14:20",
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "room": "R-104"
+    },
+    {
+      "day": "Friday",
+      "startTime": "14:20",
+      "endTime": "15:10",
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "room": "R-105"
+    },
+    {
+      "day": "Saturday",
+      "startTime": "09:00",
+      "endTime": "09:50",
+      "subjectCode": "SMP101",
+      "subjectName": "Sample Algorithms",
+      "faculty": "Dr. A. Faculty",
+      "room": "R-105"
+    },
+    {
+      "day": "Saturday",
+      "startTime": "09:50",
+      "endTime": "10:40",
+      "subjectCode": "SMP102",
+      "subjectName": "Sample Databases",
+      "faculty": "Prof. B. Teacher",
+      "room": "R-100"
+    },
+    {
+      "day": "Saturday",
+      "startTime": "10:40",
+      "endTime": "11:00",
+      "type": "Break"
+    },
+    {
+      "day": "Saturday",
+      "startTime": "11:00",
+      "endTime": "11:50",
+      "subjectCode": "SMP104",
+      "subjectName": "Sample Machine Learning",
+      "faculty": "Prof. D. Guide",
+      "room": "R-102"
+    },
+    {
+      "day": "Saturday",
+      "startTime": "11:50",
+      "endTime": "12:40",
+      "subjectCode": "SMP105",
+      "subjectName": "Sample Software Engineering",
+      "faculty": "Dr. E. Tutor",
+      "room": "R-103"
+    },
+    {
+      "day": "Saturday",
+      "startTime": "12:40",
+      "endTime": "13:30",
+      "type": "Lunch"
+    }
+  ]
+}
