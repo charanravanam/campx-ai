@@ -1,6 +1,7 @@
 // All HTTP calls live here. Credentials/tokens are never stored by this file:
 // the session lives in an HttpOnly cookie the browser manages; the CSRF token
 // is kept in memory only.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 let csrfToken = null;
 let onUnauthorized = () => {};
 
