@@ -1,4 +1,3 @@
-```javascript
 // All HTTP calls live here. Credentials/tokens are never stored by this file:
 // the session lives in an HttpOnly cookie the browser manages; the CSRF token
 // is kept in memory only.
@@ -108,4 +107,3 @@ export const api = {
   importJson: (kind, text) => request("POST", `/api/import/${kind}`, { rawBody: text }),
   deleteImport: (kind) => request("DELETE", `/api/import/${kind}`),
 };
-```
