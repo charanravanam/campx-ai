@@ -15,8 +15,13 @@ from ..sessions import now
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 
-def _cookie_kwargs(s) -> dict:
-    return {"httponly": True, "secure": s.secure_cookies, "samesite": "lax", "path": "/"}
+def _cookie_kwargs(s):
+    return {
+        "httponly": True,
+        "secure": s.secure_cookies,
+        "samesite": "none" if s.secure_cookies else "lax",
+        "path": "/",
+    }
 
 
 def _set_csrf_cookie(response: Response, s, token: str) -> None:
