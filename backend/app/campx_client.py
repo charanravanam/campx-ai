@@ -176,16 +176,34 @@ class CampXClient:
                 "No session was created.",
             )
         session = data.get("session")
-        token = session.get("token") if isinstance(session, dict) else None
+        if not isinstance(session, dict):
+            session = {}
+
+        token = session.get("token")
+        cookies = _extract_cookies(resp, self.s.cookie_name_allowlist)
+
+        # CampX may authenticate using its session cookie instead of a JSON token.
+        cookie_auth = (
+            "cookie" in self.s.auth_modes
+            and bool(cookies.get("campx_session_key"))
+        )
+
         if not isinstance(token, str) or not token:
-            raise AppError(502, "upstream_malformed", "CampX login succeeded but returned no session token.")
+            if not cookie_auth:
+                raise AppError(
+                    502,
+                    "upstream_malformed",
+                    "CampX login succeeded but returned no usable authentication credential.",
+                )
+            token = ""
+
         return LoginResult(
             token=token,
             token_expiry=_parse_iso(session.get("tokenExpiry")),
-            cookies=_extract_cookies(resp, self.s.cookie_name_allowlist),
+            cookies=cookies,
         )
 
-    # ----------------------------------------------------------- authenticated
+        # ----------------------------------------------------------- authenticated
     def get_json(self, path: str, state: dict[str, Any]) -> Any:
         """GET a configured CampX path with THIS student's session state."""
         path = (path or "").strip()
