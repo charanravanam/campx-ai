@@ -1,7 +1,8 @@
+```javascript
 // All HTTP calls live here. Credentials/tokens are never stored by this file:
 // the session lives in an HttpOnly cookie the browser manages; the CSRF token
 // is kept in memory only.
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/+$/, "");
 let csrfToken = null;
 let onUnauthorized = () => {};
 
@@ -19,7 +20,9 @@ export class ApiError extends Error {
 
 async function ensureCsrf(force = false) {
   if (csrfToken && !force) return csrfToken;
-  const res = await fetch(`${API_BASE_URL}/api/auth/csrf`, { credentials: "include" });
+  const res = await fetch(`${API_BASE_URL}/api/auth/csrf`, {
+    credentials: "include",
+  });
   if (!res.ok) throw await toError(res);
   csrfToken = (await res.json()).csrf_token;
   return csrfToken;
@@ -41,16 +44,31 @@ async function request(method, path, { json, rawBody, signal } = {}, retried = f
   const headers = {};
   const unsafe = method !== "GET";
   if (unsafe) headers["X-CSRF-Token"] = await ensureCsrf();
+
   let body;
-  if (json !== undefined) { headers["Content-Type"] = "application/json"; body = JSON.stringify(json); }
-  if (rawBody !== undefined) { headers["Content-Type"] = "application/json"; body = rawBody; }
+  if (json !== undefined) {
+    headers["Content-Type"] = "application/json";
+    body = JSON.stringify(json);
+  }
+  if (rawBody !== undefined) {
+    headers["Content-Type"] = "application/json";
+    body = rawBody;
+  }
+
   let res;
   try {
-    res = await fetch(`${API_BASE_URL}${path}` { method, headers, body, credentials: "include", signal });
+    res = await fetch(`${API_BASE_URL}${path}`, {
+      method,
+      headers,
+      body,
+      credentials: "include",
+      signal,
+    });
   } catch (e) {
     if (e.name === "AbortError") throw e;
     throw new ApiError(0, "network", "Cannot reach the CampX AI server. Is the backend running?");
   }
+
   if (!res.ok) {
     const err = await toError(res);
     if (err.code === "csrf_failed" && !retried) {
@@ -60,6 +78,7 @@ async function request(method, path, { json, rawBody, signal } = {}, retried = f
     if (err.status === 401 && path !== "/api/auth/login") onUnauthorized(err);
     throw err;
   }
+
   return res.json();
 }
 
@@ -67,10 +86,14 @@ export const api = {
   me: () => request("GET", "/api/auth/me"),
   login: async (loginId, password) => {
     const out = await request("POST", "/api/auth/login", { json: { loginId, password } });
-    csrfToken = out.csrf_token; // rotated by the server on login
+    csrfToken = out.csrf_token;
     return out;
   },
-  logout: async () => { const o = await request("POST", "/api/auth/logout"); csrfToken = null; return o; },
+  logout: async () => {
+    const o = await request("POST", "/api/auth/logout");
+    csrfToken = null;
+    return o;
+  },
   profile: (signal) => request("GET", "/api/profile", { signal }),
   timetable: (signal) => request("GET", "/api/timetable", { signal }),
   today: (signal) => request("GET", "/api/timetable/today", { signal }),
@@ -85,3 +108,4 @@ export const api = {
   importJson: (kind, text) => request("POST", `/api/import/${kind}`, { rawBody: text }),
   deleteImport: (kind) => request("DELETE", `/api/import/${kind}`),
 };
+```
