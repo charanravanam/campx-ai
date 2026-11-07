@@ -19,7 +19,7 @@ export class ApiError extends Error {
 
 async function ensureCsrf(force = false) {
   if (csrfToken && !force) return csrfToken;
-  const res = await fetch("/api/auth/csrf", { credentials: "same-origin" });
+  const res = await fetch(`${API_BASE_URL}/api/auth/csrf`, { credentials: "include" });
   if (!res.ok) throw await toError(res);
   csrfToken = (await res.json()).csrf_token;
   return csrfToken;
@@ -46,7 +46,7 @@ async function request(method, path, { json, rawBody, signal } = {}, retried = f
   if (rawBody !== undefined) { headers["Content-Type"] = "application/json"; body = rawBody; }
   let res;
   try {
-    res = await fetch(path, { method, headers, body, credentials: "same-origin", signal });
+    res = await fetch(`${API_BASE_URL}${path}` { method, headers, body, credentials: "include", signal });
   } catch (e) {
     if (e.name === "AbortError") throw e;
     throw new ApiError(0, "network", "Cannot reach the CampX AI server. Is the backend running?");
